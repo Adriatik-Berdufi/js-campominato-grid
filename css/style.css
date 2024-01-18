@@ -1,7 +1,7 @@
 :root {
   --header-height: 90px;
   --footer-height: 90px;
-  
+  --box:80px
 }
 
 /** Reset **/
@@ -50,10 +50,9 @@ body{
   border: 2px dashed black;
 }
 .box{
-  height: calc(100% / 10);
-  width: calc(100% / 10);
+  height: var(--box);
+  width: var(--box);
   border: 2px dashed black;
-
 }
 .clicked{
   background-color: aqua;
@@ -81,8 +80,8 @@ body{
   background-color: rgb(255, 254, 253);
   display: flex;
   flex-wrap: wrap;
-  height:750px;
-  width: 750px;
+  height:calc(10* var(--box));
+  width: calc(10* var(--box));
   
 }
 
