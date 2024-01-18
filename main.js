@@ -7,7 +7,7 @@ let valueDifficulty;
 genera.addEventListener('click', function(){
     //*svuoto la glriglia
     boxContainer.innerHTML = " ";
-    
+
     //* converto in intero il value della difficolta
     valueDifficulty = parseInt(difficulty.value);
     
@@ -33,16 +33,17 @@ function boxGenerator(nr) {
     //* vreo l'el e aggiungo la classe box
     const box = document.createElement('div');
     box.classList.add ('box');
-    box.innerHTML = nr;
+    
     box.addEventListener('click', function(){
-        box.classList.toggle("clicked")
+        box.classList.toggle("clicked");
+        box.innerHTML = nr;
     });
     
     return box;
 };
 //** Grid generator */
-function
-generateGrid (boxContainer , difficulty ,oldContainerClass) {
+
+function generateGrid (boxContainer , difficulty ,oldContainerClass) {
     //* calc della radice del value della diffioclta
     let x = Math.sqrt(difficulty)
 
