@@ -3,7 +3,7 @@ const genera = document.getElementById("genera");
 const difficulty = document.getElementById("difficulty");
 
 let valueDifficulty;
-console.log(valueDifficulty);
+
 genera.addEventListener('click', function(){
     //*svuoto la glriglia
     boxContainer.innerHTML = " ";
@@ -13,8 +13,14 @@ genera.addEventListener('click', function(){
     boxGenerator();
     //* call della funzione griglia 
     generateGrid (boxContainer ,valueDifficulty );
+   
     
-})
+});
+
+
+
+
+
 
 
 //***** FUNZIONI *****//
@@ -24,14 +30,21 @@ function boxGenerator() {
     //* vreo l'el e aggiungo la classe box
     const box = document.createElement('div');
     box.classList.add ('box');
+    box.addEventListener('click', function(){
+        box.classList.toggle("clicked")
+    })
+
+
     return box;
+
+
 };
 //** Grid generator */
 function
 generateGrid (boxContainer , difficulty) {
     //* calc della radice del value della diffioclta
     let x = Math.sqrt(difficulty)
-    
+
     //* creo la classe da usare per quella diffioclta 
     let y = "container-" + x ;
 
