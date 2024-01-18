@@ -35,16 +35,29 @@ body{
 
 .container {
   max-width: 1080px;
+  min-height: calc(100vh - var(--header-height) - var(--footer-height));
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
+  background-color: blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
 }
 .brd{
   border: 2px dashed black;
 }
+.box{
+  height: calc(100% / 10);
+  width: calc(100% / 10);
+  border: 2px dashed black;
 
-
+}
+.clicked{
+  background-color: aqua;
+}
 
 /** HEADER **/
 .header {
@@ -64,7 +77,14 @@ body{
 .wrapper{
   min-height: calc(100vh - var(--header-height) - var(--footer-height));
 }
-
+.box-container{
+  background-color: rgb(255, 254, 253);
+  display: flex;
+  flex-wrap: wrap;
+  height:750px;
+  width: 750px;
+  
+}
 
 
 /** FOOTER **/
