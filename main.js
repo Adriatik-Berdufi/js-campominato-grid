@@ -26,13 +26,15 @@ genera.addEventListener('click', function(){
 //***** FUNZIONI *****//
 
 //** box generator  */
-function boxGenerator() {
+function boxGenerator(nr) {
     //* vreo l'el e aggiungo la classe box
     const box = document.createElement('div');
     box.classList.add ('box');
+    box.innerHTML = nr;
     box.addEventListener('click', function(){
         box.classList.toggle("clicked")
-    })
+    });
+    
 
 
     return box;
@@ -53,7 +55,7 @@ generateGrid (boxContainer , difficulty) {
 
     //* aggingo l'el box nel boxContainer
     for (let i = 0; i < difficulty; i++) {
-    const boxElement = boxGenerator();
+    const boxElement = boxGenerator(i+ 1);
     boxContainer.append(boxElement);
     };
 };

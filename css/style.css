@@ -52,6 +52,9 @@ body{
 .box{
   height: var(--box);
   width: var(--box);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: 2px dashed black;
 }
 .clicked{
