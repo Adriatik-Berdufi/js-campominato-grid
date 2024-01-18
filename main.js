@@ -24,6 +24,10 @@ function boxGenerator() {
 //** Grid generator */
 function
 generateGrid (boxContainer , difficulty) {
+    let x = Math.sqrt(difficulty)
+    let y = "container-" + x ;
+    boxContainer.classList.toggle(y)
+    console.log(x);
     for (let i = 0; i < difficulty; i++) {
     const boxElement = boxGenerator();
     boxContainer.append(boxElement);

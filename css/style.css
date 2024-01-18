@@ -1,7 +1,7 @@
 :root {
   --header-height: 90px;
   --footer-height: 90px;
-  --box:80px
+  --box:70px
 }
 
 /** Reset **/
@@ -80,11 +80,20 @@ body{
   background-color: rgb(255, 254, 253);
   display: flex;
   flex-wrap: wrap;
-  height:calc(10* var(--box));
-  width: calc(10* var(--box));
   
 }
-
+.container-10{
+  height:calc(10* var(--box));
+  width: calc(10* var(--box)); 
+}
+.container-9{
+  height:calc(9* var(--box));
+  width: calc(9* var(--box)); 
+}
+.container-7{
+  height:calc(7* var(--box));
+  width: calc(7* var(--box)); 
+}
 
 /** FOOTER **/
 .footer {
