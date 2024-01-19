@@ -65,6 +65,7 @@ body{
 .punto{
   color: black;
   background-color: aqua;
+  cursor: not-allowed;
 }
 .bomb{
   color: white;

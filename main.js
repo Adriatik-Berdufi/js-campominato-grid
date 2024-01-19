@@ -3,7 +3,8 @@ const genera = document.getElementById("genera");
 const difficulty = document.getElementById("difficulty");
 let oldContainerClass;
 let valueDifficulty;
-
+let score = 0;
+let gameOver = false;
 genera.addEventListener('click', function(){
     //*svuoto la glriglia
     boxContainer.innerHTML = " ";
@@ -50,37 +51,35 @@ function boxGenerator(nr,bmb) {
     //* vreo l'el e aggiungo la classe box
     const box = document.createElement('div');
     box.classList.add ('box');
-    box.classList.add("unclicked");
     box.innerHTML = nr;
-    
+    box.classList.add("unclicked");
   
     
     
     box.addEventListener('click', function(){
-        if(nr == "bomba"){
-            box.classList.add("bomb");
-            box.innerHTML = nr;
-            const endGame = document.querySelectorAll('.box');
-    
-            endGame.forEach(function(element) {
-                element.classList.remove('unclicked');
-                if (element.innerHTML === "bomba") {
-                    element.classList.add('bomb');
-                } else {
-                    element.classList.add('punto');
+       if(!gameOver){
+            if(nr == "bomba"){
+                box.classList.add("bomb");
+                box.innerHTML = nr;
+                gameOver = true;
+                alert(`hai perso: il tuo punteggio: ${score} `);
+                
+                
+            } else {
+                box.classList.add("punto");
+                score ++;
+                if(score == valueDifficulty - 16){
+                    alert('Non so come ma hai vinto XD');
                 };
-               
-            });
-        } else {
-            box.classList.add("punto");
-            console.log(nr);
-        }
-    
-        console.log(box.classList);
+        
+                
+            };
+       };
+       
     });
- 
-     
     
+     
+     
     return box;
 };
 //** Grid generator */
