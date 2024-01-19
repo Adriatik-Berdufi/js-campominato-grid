@@ -57,8 +57,18 @@ body{
   align-items: center;
   border: 2px dashed black;
 }
-.clicked{
+.unclicked{
+ background-color: white;
+ color: white;
+}
+
+.punto{
+  color: black;
   background-color: aqua;
+}
+.bomb{
+  color: white;
+  background-color: red;
 }
 
 /** HEADER **/
