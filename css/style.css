@@ -40,7 +40,6 @@ body{
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
-  background-color: blue;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -55,7 +54,7 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px dashed black;
+  border: 1px solid black;
 }
 .unclicked{
  background-color: white;
@@ -75,7 +74,7 @@ body{
 /** HEADER **/
 .header {
   min-height: var(--header-height);
-  background-color: rgb(130, 64, 40);
+  background-color: rgb(97, 139, 193);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -83,6 +82,13 @@ body{
 .header > .logo{
   width: 200px;
   height: 50px;
+}
+.scorebox{
+  background-color: rgb(121, 174, 61);
+  height: 40px;
+  width: 120px;
+  line-height: 40px;
+  border-radius: 5px;
 }
 
 
@@ -112,5 +118,8 @@ body{
 /** FOOTER **/
 .footer {
   min-height: var(--footer-height);
-  background-color: goldenrod;
+  background-color: rgb(97, 139, 193);;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
